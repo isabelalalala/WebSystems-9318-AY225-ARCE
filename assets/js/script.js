@@ -270,6 +270,18 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// Add this at the end of your DOMContentLoaded event listener
+// (around line 280 in your script.js)
+
+// Initialize matrix effect
+initMatrixEffect();
+
+// Make sure matrix canvas is visible
+const matrixCanvas = document.getElementById('matrixCanvas');
+if (matrixCanvas) {
+    matrixCanvas.style.display = 'block';
+}
+
 // ===== ANNOUNCEMENTS FILTER =====
 function filterAnnouncements(category) {
     const announcements = document.querySelectorAll('.announcement');
@@ -655,12 +667,26 @@ function updateActiveNavLink() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const navLinks = document.querySelectorAll('nav a');
     
+// Multi-page navigation - set active state
+document.addEventListener('DOMContentLoaded', () => {
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-container ul li a');
+    
     navLinks.forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('href') === currentPage) {
+        
+        const linkPath = link.getAttribute('href');
+        
+        // Check if current page matches link
+        if (currentPath.endsWith(linkPath) || 
+            (currentPath === '/' && linkPath.includes('index.html')) ||
+            (currentPath.includes('index.html') && linkPath.includes('index.html'))) {
             link.classList.add('active');
         }
     });
+});
+
+// Keep the rest of your code (stats animation, particles, etc.)
 }
 
 // ===== INITIALIZE EVERYTHING =====
@@ -698,3 +724,60 @@ window.filterFaculty = filterFaculty;
 window.filterByDepartment = filterByDepartment;
 window.filterAnnouncements = filterAnnouncements;
 window.performSearch = performSearch;
+
+function animateValue(element, start, end, duration) {
+    const range = end - start;
+    const increment = range / (duration / 16);
+    let current = start;
+    const isPercentage = element.parentElement.querySelector('p').textContent.includes('%');
+    
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= end) {
+            element.textContent = isPercentage ? end + '+' : end + '+';
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(current);
+        }
+    }, 16);
+}
+
+// Matrix Canvas Animation
+function initMatrixEffect() {
+    const canvas = document.getElementById('matrixCanvas');
+    if (!canvas) return;
+    
+    const ctx = canvas.getContext('2d');
+    
+    // Set canvas size
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+    
+    const columns = Math.floor(canvas.width / 20);
+    const drops = Array(columns).fill(1);
+    
+    const matrixChars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+    
+    function draw() {
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        ctx.fillStyle = '#00d9ff';
+        ctx.font = '15px monospace';
+        
+        for (let i = 0; i < drops.length; i++) {
+            const text = matrixChars[Math.floor(Math.random() * matrixChars.length)];
+            ctx.fillText(text, i * 20, drops[i] * 20);
+            
+            if (drops[i] * 20 > canvas.height && Math.random() > 0.975) {
+                drops[i] = 0;
+            }
+            drops[i]++;
+        }
+    }
+    
+    setInterval(draw, 35);
+}
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', initMatrixEffect);

@@ -82,20 +82,11 @@ nav {
     letter-spacing: 2px;
 }
 
-/* TO ADD YOUR LOGO IMAGE:
-   Replace the .logo-icon with an <img> tag in HTML:
-   <img src="your-logo.png" alt="CCS Logo" class="logo-icon">
-   
-   Then update the CSS:
-   .logo-icon {
-       width: 50px;
-       height: 50px;
-       object-fit: contain;
-   }
-*/
-
 .logo-icon {
-    font-size: 2.2rem;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 10px rgba(0, 242, 255, 0.5));
 }
 
 .logo-text {
@@ -1245,7 +1236,11 @@ nav a.active::after {
     border-radius: 20px;
     border: 1px solid rgba(0, 242, 255, 0.3);
 }
-
+.contact-form select,
+.contact-form select option {
+    background-color: #1a1a2e;
+    color: #ffffff;
+}
 .contact-form h3 {
     color: var(--primary-color);
     margin-bottom: 1.5rem;
@@ -1798,4 +1793,318 @@ footer {
 
 .text-center {
     text-align: center;
+}
+
+
+/* ===== WELCOME IMAGE ===== */
+.welcome-image-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 242, 255, 0.3);
+    border: 2px solid rgba(0, 242, 255, 0.3);
+    transition: all 0.4s ease;
+    animation: fadeInUp 1s ease-out;
+}
+
+.welcome-image-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 50px rgba(0, 242, 255, 0.5);
+    border-color: var(--primary-color);
+}
+
+.welcome-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.welcome-image-container:hover .welcome-image {
+    transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments for welcome image */
+@media (max-width: 768px) {
+    .welcome-image-container {
+        margin: 1.5rem auto;
+        border-radius: 15px;
+    }
+}
+
+/* ===== TECH SHOWCASE IMAGE ===== */
+.tech-showcase-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 15px;
+    display: block;
+    background: transparent;
+}
+
+.tech-image-large {
+    position: relative;
+    background: transparent;
+}
+
+/* Hide the canvas overlay so image shows clearly */
+.tech-image-large canvas {
+    display: none;
+}
+
+#matrixCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Allow clicks to pass through */
+    z-index: 2; /* Above the image */
+    opacity: 0.7; /* Optional: make matrix effect semi-transparent */
+}
+
+.tech-image-large {
+    position: relative; /* Important: makes canvas position relative to this */
+    width: 100%;
+    height: 100%;
+}
+
+.tech-showcase-image {
+    position: relative;
+    z-index: 1;
+}
+
+/* Tech Showcase Container */
+.tech-showcase {
+    width: 100%;
+    margin: 60px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-image-large {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 217, 255, 0.3);
+}
+
+/* Image with zoom animation on hover */
+.tech-showcase-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.6s ease;
+    filter: brightness(0.7);
+}
+
+.tech-image-large:hover .tech-showcase-image {
+    transform: scale(1.1);
+}
+
+/* Matrix Canvas */
+#matrixCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+    opacity: 0;
+    animation: fadeInMatrix 2s ease forwards 0.5s;
+}
+
+@keyframes fadeInMatrix {
+    to {
+        opacity: 0.6;
+    }
+}
+
+/* Overlay Content */
+.tech-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    text-align: center;
+    width: 90%;
+    max-width: 800px;
+}
+
+.tech-title {
+    font-size: 3.5rem;
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    animation: slideInTop 1s ease forwards 0.3s;
+}
+
+.tech-subtitle {
+    font-size: 1.5rem;
+    color: #00d9ff;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    animation: slideInBottom 1s ease forwards 0.6s;
+}
+
+.tech-cta {
+    display: inline-block;
+    padding: 15px 40px;
+    background: linear-gradient(135deg, #00d9ff, #0099cc);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0, 217, 255, 0.4);
+    opacity: 0;
+    animation: slideInBottom 1s ease forwards 0.9s;
+}
+
+.tech-cta:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 217, 255, 0.6);
+    background: linear-gradient(135deg, #00ffff, #00d9ff);
+}
+
+/* Pulse border animation */
+.tech-image-large::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #00d9ff, #0099cc, #00d9ff);
+    border-radius: 20px;
+    z-index: 0;
+    opacity: 0;
+    animation: borderPulse 3s ease-in-out infinite;
+}
+
+@keyframes borderPulse {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Slide in animations */
+@keyframes slideInTop {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tech-image-large {
+        height: 400px;
+    }
+    
+    .tech-title {
+        font-size: 2rem;
+    }
+    
+    .tech-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .tech-cta {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+}
+
+/* About page images */
+.about-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 217, 255, 0.3);
+}
+
+.about-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.about-img:hover {
+    transform: scale(1.05);
+}
+
+.about-content {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Facility images */
+.facility-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.facility-card:hover .facility-img {
+    transform: scale(1.1);
+}
+
+.facility-image {
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 15px;
 }
