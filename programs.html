@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs - College of Computer Studies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="mainNav">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">💻</span>
+                <span class="logo-text">CCS</span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="programs.html" class="active">Programs</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="announcements.html">Announcements</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div class="particles" id="particles"></div>
+        <h1 class="slide-in-top">Academic Programs</h1>
+        <p class="slide-in-bottom">Discover Your Path in Technology</p>
+    </header>
+
+    <main class="container">
+        <section class="programs-intro fade-in">
+            <div class="section-header">
+                <h2 class="reveal-text">Choose Your Future</h2>
+                <div class="line-animation"></div>
+            </div>
+            <p class="text-center">We offer comprehensive programs designed to equip you with the skills and knowledge needed to excel in the rapidly evolving tech industry.</p>
+        </section>
+
+        <section class="programs-tabs">
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab="bscs" onclick="switchProgram('bscs')">
+                    <span class="tab-icon">💻</span>
+                    <span class="tab-label">BS Computer Science</span>
+                </button>
+                <button class="tab-btn" data-tab="bsit" onclick="switchProgram('bsit')">
+                    <span class="tab-icon">🌐</span>
+                    <span class="tab-label">BS Information Technology</span>
+                </button>
+                <button class="tab-btn" data-tab="bsis" onclick="switchProgram('bsis')">
+                    <span class="tab-icon">📊</span>
+                    <span class="tab-label">BS Information Systems</span>
+                </button>
+            </div>
+
+            <div class="tab-content-container">
+                <!-- BS Computer Science -->
+                <div id="bscs" class="tab-content active">
+                    <div class="program-header zoom-in">
+                        <div class="program-icon pulse">
+                            <svg width="100" height="100" viewBox="0 0 100 100">
+                                <rect x="10" y="20" width="80" height="60" stroke="#00f2ff" stroke-width="3" fill="none" rx="5"/>
+                                <line x1="10" y1="35" x2="90" y2="35" stroke="#00f2ff" stroke-width="3"/>
+                                <circle cx="20" cy="27" r="3" fill="#00f2ff"/>
+                                <circle cx="30" cy="27" r="3" fill="#00f2ff"/>
+                                <circle cx="40" cy="27" r="3" fill="#00f2ff"/>
+                                <text x="30" y="58" fill="#00f2ff" font-size="20" font-family="monospace">&lt;/&gt;</text>
+                            </svg>
+                        </div>
+                        <div class="program-info">
+                            <h3>Bachelor of Science in Computer Science</h3>
+                            <p class="program-duration">⏱️ Duration: 4 Years | 📚 Units: 165</p>
+                        </div>
+                    </div>
+
+                    <div class="program-description slide-in-left">
+                        <h4>Program Overview</h4>
+                        <p>The BS Computer Science program focuses on the theoretical foundations of computing, algorithm design, software development, and advanced programming concepts. Students will gain deep understanding of computational theory, software engineering principles, and cutting-edge technologies.</p>
+                    </div>
+
+                    <div class="program-details-grid">
+                        <div class="detail-card hover-lift">
+                            <h4>📖 Core Courses</h4>
+                            <ul class="course-list">
+                                <li class="slide-in-item">Data Structures and Algorithms</li>
+                                <li class="slide-in-item">Computer Architecture</li>
+                                <li class="slide-in-item">Operating Systems</li>
+                                <li class="slide-in-item">Database Management Systems</li>
+                                <li class="slide-in-item">Software Engineering</li>
+                                <li class="slide-in-item">Artificial Intelligence</li>
+                                <li class="slide-in-item">Computer Networks</li>
+                                <li class="slide-in-item">Theory of Computation</li>
+                                <li class="slide-in-item">Machine Learning</li>
+                                <li class="slide-in-item">Compiler Design</li>
+                            </ul>
+                        </div>
+
+                        <div class="detail-card hover-lift">
+                            <h4>💼 Career Paths</h4>
+                            <div class="career-tags">
+                                <span class="career-tag bounce">Software Developer</span>
+                                <span class="career-tag bounce">Systems Analyst</span>
+                                <span class="career-tag bounce">AI Engineer</span>
+                                <span class="career-tag bounce">Research Scientist</span>
+                                <span class="career-tag bounce">Database Administrator</span>
+                                <span class="career-tag bounce">Cloud Architect</span>
+                                <span class="career-tag bounce">Full Stack Developer</span>
+                                <span class="career-tag bounce">Data Scientist</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="program-skills">
+                        <h4>🎯 Skills You'll Master</h4>
+                        <div class="skills-grid">
+                            <div class="skill-bar">
+                                <div class="skill-label">Programming (Python, Java, C++)</div>
+                                <div class="skill-progress" data-progress="95"></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-label">Algorithm Design & Analysis</div>
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-label">Software Development</div>
+                                <div class="skill-progress" data-progress="88"></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-label">AI & Machine Learning</div>
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BS Information Technology -->
+                <div id="bsit" class="tab-content">
+                    <div class="program-header zoom-in">
+                        <div class="program-icon pulse">
+                            <svg width="100" height="100" viewBox="0 0 100 100">
+                                <circle cx="50" cy="35" r="20" stroke="#00f2ff" stroke-width="3" fill="none"/>
+                                <line x1="50" y1="55" x2="50" y2="80" stroke="#00f2ff" stroke-width="3"/>
+                                <line x1="30" y1="80" x2="70" y2="80" stroke="#00f2ff" stroke-width="3"/>
+                                <line x1="35" y1="65" x2="65" y2="65" stroke="#00f2ff" stroke-width="3"/>
+                                <circle cx="50" cy="35" r="10" stroke="#00f2ff" stroke-width="2" fill="none"/>
+                            </svg>
+                        </div>
+                        <div class="program-info">
+                            <h3>Bachelor of Science in Information Technology</h3>
+                            <p class="program-duration">⏱️ Duration: 4 Years | 📚 Units: 162</p>
+                        </div>
+                    </div>
+
+                    <div class="program-description slide-in-left">
+                        <h4>Program Overview</h4>
+                        <p>The BS IT program emphasizes practical application of technology, network administration, web development, and IT infrastructure management. This program prepares students to design, implement, and manage information technology solutions for businesses.</p>
+                    </div>
+
+                    <div class="program-details-grid">
+                        <div class="detail-card hover-lift">
+                            <h4>📖 Core Courses</h4>
+                            <ul class="course-list">
+                                <li class="slide-in-item">Web Development (Frontend & Backend)</li>
+                                <li class="slide-in-item">Network Administration</li>
+                                <li class="slide-in-item">IT Project Management</li>
+                                <li class="slide-in-item">Systems Integration and Architecture</li>
+                                <li class="slide-in-item">Cybersecurity Fundamentals</li>
+                                <li class="slide-in-item">Mobile Application Development</li>
+                                <li class="slide-in-item">Cloud Computing</li>
+                                <li class="slide-in-item">IT Service Management</li>
+                                <li class="slide-in-item">DevOps Practices</li>
+                                <li class="slide-in-item">Database Administration</li>
+                            </ul>
+                        </div>
+
+                        <div class="detail-card hover-lift">
+                            <h4>💼 Career Paths</h4>
+                            <div class="career-tags">
+                                <span class="career-tag bounce">Web Developer</span>
+                                <span class="career-tag bounce">Network Administrator</span>
+                                <span class="career-tag bounce">IT Consultant</span>
+                                <span class="career-tag bounce">Systems Administrator</span>
+                                <span class="career-tag bounce">DevOps Engineer</span>
+                                <span class="career-tag bounce">IT Project Manager</span>
+                                <span class="career-tag bounce">Mobile Developer</span>
+                                <span class="career-tag bounce">Cloud Engineer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="program-skills">
+                        <h4>🎯 Skills You'll Master</h4>
+                        <div class="skills-grid">
+                            <div class="skill-bar">
+                                <div class="skill-label">Web Technologies (HTML, CSS, JS, React)</div>
+                                <div class="skill-progress" data-progress="92"></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-label">Network & Security</div>
+                                <div class="skill-progress" data-progress="87"></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-label">Cloud Platforms (AWS, Azure)</div>
+                                <div class="skill-progress" data-progress="85"></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-label">Mobile Development</div>
+                                <div class="skill-progress" data-progress="83"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BS Information Systems -->
+                <div id="bsis" class="tab-content">
+                    <div class="program-header zoom-in">
+                        <div class="program-icon pulse">
+                            <svg width="100" height="100" viewBox="0 0 100 100">
+                                <rect x="15" y="15" width="30" height="30" stroke="#00f2ff" stroke-width="3" fill="none"/>
+                                <rect x="55" y="15" width="30" height="30" stroke="#00f2ff" stroke-width="3" fill="none"/>
+                                <rect x="15" y="55" width="30" height="30" stroke="#00f2ff" stroke-width="3" fill="none"/>
+                                <rect x="55" y="55" width="30" height="30" stroke="#00f2ff" stroke-width="3" fill="none"/>
+                                <line x1="45" y1="30" x2="55" y2="30" stroke="#00f2ff" stroke-width="2"/>
+                                <line x1="30" y1="45" x2="30" y2="55" stroke="#00f2ff" stroke-width="2"/>
+                                <line x1="70" y1="45" x2="70" y2="55" stroke="#00f2ff" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="program-info">
+                            <h3>Bachelor of Science in Information Systems</h3>
+                            <p class="program-duration">⏱️ Duration: 4 Years | 📚 Units: 160</p>
+                        </div>
+                    </div>
+
+                    <div class="program-description slide-in-left">
+                        <h4>Program Overview</h4>
+                        <p>The BS IS program bridges technology and business, focusing on business process analysis, enterprise systems, and information management. Students learn to align IT solutions with business objectives and drive organizational success.</p>
+                    </div>
+
+                    <div class="program-details-grid">
+                        <div class="detail-card hover-lift">
+                            <h4>📖 Core Courses</h4>
+                            <ul class="course-list">
+                                <li class="slide-in-item">Business Process Management</li>
+                                <li class="slide-in-item">Enterprise Resource Planning (ERP)</li>
+                                <li class="slide-in-item">Business Analytics</li>
+                                <li class="slide-in-item">IS Analysis and Design</li>
+                                <li class="slide-in-item">Data Warehousing</li>
+                                <li class="slide-in-item">E-Commerce Systems</li>
+                                <li class="slide-in-item">IS Strategy and Governance</li>
+                                <li class="slide-in-item">Decision Support Systems</li>
+                                <li class="slide-in-item">Business Intelligence</li>
+                                <li class="slide-in-item">IT Audit and Compliance</li>
+                            </ul>
+                        </div>
+
+                        <div class="detail-card hover-lift">
+                            <h4>💼 Career Paths</h4>
+                            <div class="career-tags">
+                                <span class="career-tag bounce">Business Analyst</span>
+                                <span class="career-tag bounce">IS Manager</span>
+                                <span class="career-tag bounce">ERP Consultant</span>
+                                <span class="career-tag bounce">Data Analyst</span>
+                                <span class="career-tag bounce">IT Business Consultant</span>
+                                <span class="career-tag bounce">Systems Integrator</span>
+                                <span class="career-tag bounce">BI Developer</span>
+                                <span class="career-tag bounce">IT Auditor</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="program-skills">
+                        <h4>🎯 Skills You'll Master</h4>
+                        <div class="skills-grid">
+                            <div class="skill-bar">
+                                <div class="skill-label">Business Process Analysis</div>
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-label">Data Analytics & BI</div>
+                                <div class="skill-progress" data-progress="88"></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-label">ERP Systems (SAP, Oracle)</div>
+                                <div class="skill-progress" data-progress="86"></div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-label">IS Strategy & Governance</div>
+                                <div class="skill-progress" data-progress="84"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="cta-content zoom-in">
+                <h2>Ready to Apply?</h2>
+                <p>Take the first step towards your future in technology</p>
+                <div class="cta-buttons">
+                    <a href="contact.html" class="btn-primary pulse">Apply Now</a>
+                    <a href="contact.html" class="btn-secondary">Request Information</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>College of Computer Studies</h3>
+                <p>Innovating the Future Through Technology</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="faculty.html">Faculty</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>📞 +1 (555) 123-4567</p>
+                <p>📧 info@ccs.edu</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 College of Computer Studies. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

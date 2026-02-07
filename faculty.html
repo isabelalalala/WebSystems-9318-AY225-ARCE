@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faculty - College of Computer Studies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="mainNav">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">💻</span>
+                <span class="logo-text">CCS</span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="faculty.html" class="active">Faculty</a></li>
+                <li><a href="announcements.html">Announcements</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div class="particles" id="particles"></div>
+        <h1 class="slide-in-top">Faculty Directory</h1>
+        <p class="slide-in-bottom">Meet Our Expert Educators</p>
+    </header>
+
+    <main class="container">
+        <section class="faculty-search-section fade-in">
+            <div class="section-header">
+                <h2 class="reveal-text">Find Faculty Members</h2>
+                <div class="line-animation"></div>
+            </div>
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="facultySearch" placeholder="🔍 Search by name or specialization..." class="search-input">
+                    <button class="search-btn" onclick="performSearch()">Search</button>
+                </div>
+                <div class="filter-tags">
+                    <button class="filter-tag active" onclick="filterByDepartment('all')">All</button>
+                    <button class="filter-tag" onclick="filterByDepartment('AI')">AI & ML</button>
+                    <button class="filter-tag" onclick="filterByDepartment('Security')">Cybersecurity</button>
+                    <button class="filter-tag" onclick="filterByDepartment('Software')">Software Engineering</button>
+                    <button class="filter-tag" onclick="filterByDepartment('Data')">Data Science</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="faculty-grid-section">
+            <div id="facultyList" class="faculty-grid">
+                <!-- Faculty Member 1 -->
+                <div class="faculty-card hover-lift" data-name="Dr. Sarah Johnson" data-spec="Artificial Intelligence Machine Learning" data-dept="AI">
+                    <div class="faculty-avatar pulse">
+                        <div class="avatar-placeholder">SJ</div>
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Dr. Sarah Johnson</h3>
+                        <p class="faculty-title">Professor & Dean</p>
+                        <p class="faculty-spec">🎯 Artificial Intelligence, Machine Learning</p>
+                        <div class="faculty-details">
+                            <p>📧 sjohnson@ccs.edu</p>
+                            <p>📍 Room 301</p>
+                            <p>📚 Ph.D. in Computer Science, MIT</p>
+                            <p>🏆 15+ years of experience</p>
+                        </div>
+                        <div class="faculty-badges">
+                            <span class="badge">AI Expert</span>
+                            <span class="badge">Dean</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Faculty Member 2 -->
+                <div class="faculty-card hover-lift" data-name="Dr. Michael Chen" data-spec="Cybersecurity Network Security" data-dept="Security">
+                    <div class="faculty-avatar pulse" style="animation-delay: 0.1s">
+                        <div class="avatar-placeholder">MC</div>
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Dr. Michael Chen</h3>
+                        <p class="faculty-title">Associate Professor</p>
+                        <p class="faculty-spec">🎯 Cybersecurity, Network Security</p>
+                        <div class="faculty-details">
+                            <p>📧 mchen@ccs.edu</p>
+                            <p>📍 Room 305</p>
+                            <p>📚 Ph.D. in Information Security, Stanford</p>
+                            <p>🏆 12+ years of experience</p>
+                        </div>
+                        <div class="faculty-badges">
+                            <span class="badge">Security Expert</span>
+                            <span class="badge">CISSP Certified</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Faculty Member 3 -->
+                <div class="faculty-card hover-lift" data-name="Prof. Emily Rodriguez" data-spec="Software Engineering Agile Development" data-dept="Software">
+                    <div class="faculty-avatar pulse" style="animation-delay: 0.2s">
+                        <div class="avatar-placeholder">ER</div>
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Prof. Emily Rodriguez</h3>
+                        <p class="faculty-title">Associate Professor</p>
+                        <p class="faculty-spec">🎯 Software Engineering, Agile Development</p>
+                        <div class="faculty-details">
+                            <p>📧 erodriguez@ccs.edu</p>
+                            <p>📍 Room 307</p>
+                            <p>📚 M.S. in Software Engineering, Carnegie Mellon</p>
+                            <p>🏆 10+ years of experience</p>
+                        </div>
+                        <div class="faculty-badges">
+                            <span class="badge">Scrum Master</span>
+                            <span class="badge">Industry Veteran</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Faculty Member 4 -->
+                <div class="faculty-card hover-lift" data-name="Dr. James Williams" data-spec="Database Systems Big Data Analytics" data-dept="Data">
+                    <div class="faculty-avatar pulse" style="animation-delay: 0.3s">
+                        <div class="avatar-placeholder">JW</div>
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Dr. James Williams</h3>
+                        <p class="faculty-title">Assistant Professor</p>
+                        <p class="faculty-spec">🎯 Database Systems, Big Data Analytics</p>
+                        <div class="faculty-details">
+                            <p>📧 jwilliams@ccs.edu</p>
+                            <p>📍 Room 309</p>
+                            <p>📚 Ph.D. in Data Science, UC Berkeley</p>
+                            <p>🏆 8+ years of experience</p>
+                        </div>
+                        <div class="faculty-badges">
+                            <span class="badge">Data Scientist</span>
+                            <span class="badge">Researcher</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Faculty Member 5 -->
+                <div class="faculty-card hover-lift" data-name="Prof. Lisa Anderson" data-spec="Web Development UI UX Design" data-dept="Software">
+                    <div class="faculty-avatar pulse" style="animation-delay: 0.4s">
+                        <div class="avatar-placeholder">LA</div>
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Prof. Lisa Anderson</h3>
+                        <p class="faculty-title">Assistant Professor</p>
+                        <p class="faculty-spec">🎯 Web Development, UI/UX Design</p>
+                        <div class="faculty-details">
+                            <p>📧 landerson@ccs.edu</p>
+                            <p>📍 Room 311</p>
+                            <p>📚 M.S. in Human-Computer Interaction, NYU</p>
+                            <p>🏆 9+ years of experience</p>
+                        </div>
+                        <div class="faculty-badges">
+                            <span class="badge">UX Designer</span>
+                            <span class="badge">Full-Stack Dev</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Faculty Member 6 -->
+                <div class="faculty-card hover-lift" data-name="Dr. Robert Kim" data-spec="Cloud Computing Distributed Systems" data-dept="Software">
+                    <div class="faculty-avatar pulse" style="animation-delay: 0.5s">
+                        <div class="avatar-placeholder">RK</div>
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Dr. Robert Kim</h3>
+                        <p class="faculty-title">Associate Professor</p>
+                        <p class="faculty-spec">🎯 Cloud Computing, Distributed Systems</p>
+                        <div class="faculty-details">
+                            <p>📧 rkim@ccs.edu</p>
+                            <p>📍 Room 313</p>
+                            <p>📚 Ph.D. in Distributed Computing, Georgia Tech</p>
+                            <p>🏆 11+ years of experience</p>
+                        </div>
+                        <div class="faculty-badges">
+                            <span class="badge">AWS Certified</span>
+                            <span class="badge">Cloud Architect</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Faculty Member 7 -->
+                <div class="faculty-card hover-lift" data-name="Dr. Maria Santos" data-spec="Artificial Intelligence Natural Language Processing" data-dept="AI">
+                    <div class="faculty-avatar pulse" style="animation-delay: 0.6s">
+                        <div class="avatar-placeholder">MS</div>
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Dr. Maria Santos</h3>
+                        <p class="faculty-title">Assistant Professor</p>
+                        <p class="faculty-spec">🎯 AI, Natural Language Processing</p>
+                        <div class="faculty-details">
+                            <p>📧 msantos@ccs.edu</p>
+                            <p>📍 Room 315</p>
+                            <p>📚 Ph.D. in AI, University of Toronto</p>
+                            <p>🏆 7+ years of experience</p>
+                        </div>
+                        <div class="faculty-badges">
+                            <span class="badge">NLP Expert</span>
+                            <span class="badge">Published Author</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Faculty Member 8 -->
+                <div class="faculty-card hover-lift" data-name="Prof. David Lee" data-spec="Mobile Development iOS Android" data-dept="Software">
+                    <div class="faculty-avatar pulse" style="animation-delay: 0.7s">
+                        <div class="avatar-placeholder">DL</div>
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Prof. David Lee</h3>
+                        <p class="faculty-title">Assistant Professor</p>
+                        <p class="faculty-spec">🎯 Mobile Development, iOS & Android</p>
+                        <div class="faculty-details">
+                            <p>📧 dlee@ccs.edu</p>
+                            <p>📍 Room 317</p>
+                            <p>📚 M.S. in Mobile Computing, University of Washington</p>
+                            <p>🏆 8+ years of experience</p>
+                        </div>
+                        <div class="faculty-badges">
+                            <span class="badge">iOS Dev</span>
+                            <span class="badge">Android Expert</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Faculty Member 9 -->
+                <div class="faculty-card hover-lift" data-name="Dr. Patricia Brown" data-spec="Data Science Machine Learning Analytics" data-dept="Data">
+                    <div class="faculty-avatar pulse" style="animation-delay: 0.8s">
+                        <div class="avatar-placeholder">PB</div>
+                    </div>
+                    <div class="faculty-info">
+                        <h3>Dr. Patricia Brown</h3>
+                        <p class="faculty-title">Associate Professor</p>
+                        <p class="faculty-spec">🎯 Data Science, ML, Analytics</p>
+                        <div class="faculty-details">
+                            <p>📧 pbrown@ccs.edu</p>
+                            <p>📍 Room 319</p>
+                            <p>📚 Ph.D. in Statistics, Harvard University</p>
+                            <p>🏆 13+ years of experience</p>
+                        </div>
+                        <div class="faculty-badges">
+                            <span class="badge">Data Analyst</span>
+                            <span class="badge">ML Specialist</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="noResults" class="no-results" style="display: none;">
+                <div class="no-results-icon">🔍</div>
+                <h3>No Faculty Members Found</h3>
+                <p>Try adjusting your search or filter criteria</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>College of Computer Studies</h3>
+                <p>Innovating the Future Through Technology</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>📞 +1 (555) 123-4567</p>
+                <p>📧 info@ccs.edu</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 College of Computer Studies. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

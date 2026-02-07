@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - College of Computer Studies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="mainNav">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">💻</span>
+                <span class="logo-text">CCS</span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="announcements.html">Announcements</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div class="particles" id="particles"></div>
+        <h1 class="slide-in-top">About the College</h1>
+        <p class="slide-in-bottom">Building Tomorrow's Tech Leaders Today</p>
+    </header>
+
+    <main class="container">
+        <section class="about-intro fade-in">
+            <div class="section-header">
+                <h2 class="reveal-text">Our Story</h2>
+                <div class="line-animation"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <canvas id="aboutCanvas"></canvas>
+                </div>
+                <div class="about-text slide-in-right">
+                    <p>Founded in 2011, the College of Computer Studies has been at the forefront of technological education and innovation. We are dedicated to developing competent, ethical, and innovative computer professionals who will contribute to the advancement of technology and society.</p>
+                    <p>Our commitment to excellence has made us one of the leading institutions in computer education, recognized both nationally and internationally for our impact in the field.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mission-vision">
+            <div class="mv-grid">
+                <div class="mv-card zoom-in" style="animation-delay: 0.1s">
+                    <div class="mv-icon pulse">
+                        <svg width="60" height="60" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="40" stroke="#00f2ff" stroke-width="3" fill="none"/>
+                            <path d="M50 30 L50 70 M30 50 L70 50" stroke="#00f2ff" stroke-width="3"/>
+                        </svg>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To develop competent, ethical, and innovative computer professionals who will contribute to the advancement of technology and society through quality education, cutting-edge research, and community engagement.</p>
+                </div>
+
+                <div class="mv-card zoom-in" style="animation-delay: 0.3s">
+                    <div class="mv-icon pulse" style="animation-delay: 0.5s">
+                        <svg width="60" height="60" viewBox="0 0 100 100">
+                            <polygon points="50,15 85,85 15,85" stroke="#00f2ff" stroke-width="3" fill="none"/>
+                            <circle cx="50" cy="55" r="15" stroke="#00f2ff" stroke-width="3" fill="none"/>
+                        </svg>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To be a leading institution in computer education, research, and innovation, recognized globally for excellence and impact in shaping the future of technology and producing world-class graduates.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="core-values">
+            <div class="section-header">
+                <h2 class="reveal-text">Core Values</h2>
+                <div class="line-animation"></div>
+            </div>
+            <div class="values-grid">
+                <div class="value-card hover-lift rotate-in" style="animation-delay: 0.1s">
+                    <div class="value-icon">💡</div>
+                    <h4>Innovation</h4>
+                    <p>Embracing creativity and forward-thinking solutions to address complex technological challenges</p>
+                </div>
+                <div class="value-card hover-lift rotate-in" style="animation-delay: 0.2s">
+                    <div class="value-icon">⭐</div>
+                    <h4>Excellence</h4>
+                    <p>Striving for the highest standards in all endeavors, from teaching to research</p>
+                </div>
+                <div class="value-card hover-lift rotate-in" style="animation-delay: 0.3s">
+                    <div class="value-icon">🤝</div>
+                    <h4>Integrity</h4>
+                    <p>Upholding ethical principles and professionalism in every aspect of our work</p>
+                </div>
+                <div class="value-card hover-lift rotate-in" style="animation-delay: 0.4s">
+                    <div class="value-icon">🎯</div>
+                    <h4>Dedication</h4>
+                    <p>Committed to student success and continuous improvement in our programs</p>
+                </div>
+                <div class="value-card hover-lift rotate-in" style="animation-delay: 0.5s">
+                    <div class="value-icon">🌍</div>
+                    <h4>Social Responsibility</h4>
+                    <p>Using technology to create positive impact in our communities and society</p>
+                </div>
+                <div class="value-card hover-lift rotate-in" style="animation-delay: 0.6s">
+                    <div class="value-icon">🚀</div>
+                    <h4>Progress</h4>
+                    <p>Continuously evolving to meet the changing demands of the tech industry</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="facilities">
+            <div class="section-header">
+                <h2 class="reveal-text">World-Class Facilities</h2>
+                <div class="line-animation"></div>
+            </div>
+            <div class="facilities-grid">
+                <div class="facility-card slide-in-left">
+                    <div class="facility-image">
+                        <canvas class="facility-canvas" data-type="lab"></canvas>
+                    </div>
+                    <h4>🖥️ Computer Laboratories</h4>
+                    <p>10 state-of-the-art computer labs equipped with the latest hardware and software for programming, development, and testing</p>
+                </div>
+                <div class="facility-card slide-in-right">
+                    <div class="facility-image">
+                        <canvas class="facility-canvas" data-type="ai"></canvas>
+                    </div>
+                    <h4>🤖 AI & Robotics Lab</h4>
+                    <p>Dedicated space for artificial intelligence research with GPU clusters and robotics equipment</p>
+                </div>
+                <div class="facility-card slide-in-left">
+                    <div class="facility-image">
+                        <canvas class="facility-canvas" data-type="network"></canvas>
+                    </div>
+                    <h4>🌐 Network Operations Center</h4>
+                    <p>Enterprise-level networking infrastructure for hands-on training in network administration and cybersecurity</p>
+                </div>
+                <div class="facility-card slide-in-right">
+                    <div class="facility-image">
+                        <canvas class="facility-canvas" data-type="cloud"></canvas>
+                    </div>
+                    <h4>☁️ Cloud Computing Lab</h4>
+                    <p>Access to major cloud platforms (AWS, Azure, Google Cloud) for practical cloud computing experience</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="achievements">
+            <div class="section-header">
+                <h2 class="reveal-text">Our Achievements</h2>
+                <div class="line-animation"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item slide-in-left">
+                    <div class="timeline-year pulse">2026</div>
+                    <div class="timeline-content">
+                        <h4>Excellence Award</h4>
+                        <p>Received the National Excellence Award for Outstanding Computer Science Program</p>
+                    </div>
+                </div>
+                <div class="timeline-item slide-in-right">
+                    <div class="timeline-year pulse">2024</div>
+                    <div class="timeline-content">
+                        <h4>Research Milestone</h4>
+                        <p>Published 50+ research papers in top-tier international conferences and journals</p>
+                    </div>
+                </div>
+                <div class="timeline-item slide-in-left">
+                    <div class="timeline-year pulse">2022</div>
+                    <div class="timeline-content">
+                        <h4>Industry Partnership</h4>
+                        <p>Established partnerships with 25+ leading tech companies for internships and placements</p>
+                    </div>
+                </div>
+                <div class="timeline-item slide-in-right">
+                    <div class="timeline-year pulse">2020</div>
+                    <div class="timeline-content">
+                        <h4>Accreditation</h4>
+                        <p>Achieved Level IV Accreditation from PACUCOA, the highest accreditation level</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>College of Computer Studies</h3>
+                <p>Innovating the Future Through Technology</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="faculty.html">Faculty</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>📞 +1 (555) 123-4567</p>
+                <p>📧 info@ccs.edu</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 College of Computer Studies. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcements - College of Computer Studies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="mainNav">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">💻</span>
+                <span class="logo-text">CCS</span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="announcements.html" class="active">Announcements</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div class="particles" id="particles"></div>
+        <h1 class="slide-in-top">Announcements & Events</h1>
+        <p class="slide-in-bottom">Stay Updated with CCS</p>
+    </header>
+
+    <main class="container">
+        <section class="announcements-intro fade-in">
+            <div class="section-header">
+                <h2 class="reveal-text">Latest Updates</h2>
+                <div class="line-animation"></div>
+            </div>
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterAnnouncements('all')">All</button>
+                <button class="filter-btn" onclick="filterAnnouncements('event')">Events</button>
+                <button class="filter-btn" onclick="filterAnnouncements('academic')">Academic</button>
+                <button class="filter-btn" onclick="filterAnnouncements('news')">News</button>
+            </div>
+        </section>
+
+        <section class="announcement-board-section">
+            <div id="announcementBoard" class="announcement-board">
+                <!-- Announcement 1 -->
+                <div class="announcement slide-in-left" data-category="event">
+                    <div class="announcement-header">
+                        <span class="announcement-badge event">Event</span>
+                        <span class="announcement-date">📅 February 10, 2026</span>
+                    </div>
+                    <h3 class="announcement-title">🚀 Tech Innovation Summit 2026</h3>
+                    <p class="announcement-content">Join us for our annual Tech Innovation Summit featuring keynote speakers from leading tech companies including Google, Microsoft, and Amazon. Topics include AI, Cloud Computing, and Cybersecurity. This is a fantastic networking opportunity for students to connect with industry leaders.</p>
+                    <div class="announcement-details">
+                        <p><strong>📍 Venue:</strong> CCS Main Auditorium</p>
+                        <p><strong>🕐 Time:</strong> 9:00 AM - 5:00 PM</p>
+                        <p><strong>💰 Fee:</strong> Free for CCS Students</p>
+                    </div>
+                    <button class="announcement-btn pulse">Register Now</button>
+                </div>
+
+                <!-- Announcement 2 -->
+                <div class="announcement slide-in-right" data-category="academic">
+                    <div class="announcement-header">
+                        <span class="announcement-badge academic">Academic</span>
+                        <span class="announcement-date">📅 February 5, 2026</span>
+                    </div>
+                    <h3 class="announcement-title">📚 Summer Enrollment Now Open</h3>
+                    <p class="announcement-content">Summer enrollment is now open! Students can register for advanced courses including Machine Learning, Mobile Development, Cloud Architecture, and Data Analytics. Early bird discount of 15% available until February 20.</p>
+                    <div class="announcement-details">
+                        <p><strong>📝 Registration Deadline:</strong> March 1, 2026</p>
+                        <p><strong>🎓 Available Programs:</strong> All undergraduate programs</p>
+                        <p><strong>💡 Special Offer:</strong> 15% early registration discount</p>
+                    </div>
+                    <button class="announcement-btn pulse">Enroll Now</button>
+                </div>
+
+                <!-- Announcement 3 -->
+                <div class="announcement slide-in-left" data-category="event">
+                    <div class="announcement-header">
+                        <span class="announcement-badge event">Event</span>
+                        <span class="announcement-date">📅 January 28, 2026</span>
+                    </div>
+                    <h3 class="announcement-title">💻 Hackathon 2026: Code for Change</h3>
+                    <p class="announcement-content">CCS is hosting a 48-hour hackathon focused on creating innovative solutions for social impact. Develop apps and systems that make a difference! Amazing prizes worth $10,000 and internship opportunities with partner companies.</p>
+                    <div class="announcement-details">
+                        <p><strong>👥 Team Size:</strong> 2-4 students</p>
+                        <p><strong>🏆 Prizes:</strong> 1st: $5,000 | 2nd: $3,000 | 3rd: $2,000</p>
+                        <p><strong>📅 Event Date:</strong> February 20-22, 2026</p>
+                    </div>
+                    <button class="announcement-btn pulse">Register Team</button>
+                </div>
+
+                <!-- Announcement 4 -->
+                <div class="announcement slide-in-right" data-category="academic">
+                    <div class="announcement-header">
+                        <span class="announcement-badge academic">Academic</span>
+                        <span class="announcement-date">📅 January 25, 2026</span>
+                    </div>
+                    <h3 class="announcement-title">🎤 Guest Lecture: Future of Quantum Computing</h3>
+                    <p class="announcement-content">Dr. Alan Peterson from MIT will deliver a special lecture on quantum computing applications and the future of computational technology. This is a rare opportunity to learn from one of the leading minds in quantum research.</p>
+                    <div class="announcement-details">
+                        <p><strong>🎓 Speaker:</strong> Dr. Alan Peterson (MIT Professor)</p>
+                        <p><strong>📅 Date:</strong> February 18, 2026</p>
+                        <p><strong>🕐 Time:</strong> 2:00 PM - 4:00 PM</p>
+                        <p><strong>📍 Venue:</strong> CCS Auditorium</p>
+                    </div>
+                    <button class="announcement-btn pulse">RSVP</button>
+                </div>
+
+                <!-- Announcement 5 -->
+                <div class="announcement slide-in-left" data-category="news">
+                    <div class="announcement-header">
+                        <span class="announcement-badge news">News</span>
+                        <span class="announcement-date">📅 January 20, 2026</span>
+                    </div>
+                    <h3 class="announcement-title">🔬 Research Grant Applications Open</h3>
+                    <p class="announcement-content">Faculty and graduate students can now apply for research grants up to $50,000 for projects in AI, Cybersecurity, and Data Science. This funding opportunity supports groundbreaking research in emerging technologies.</p>
+                    <div class="announcement-details">
+                        <p><strong>💰 Grant Amount:</strong> Up to $50,000</p>
+                        <p><strong>📋 Focus Areas:</strong> AI, Cybersecurity, Data Science</p>
+                        <p><strong>⏰ Deadline:</strong> March 1, 2026</p>
+                    </div>
+                    <button class="announcement-btn pulse">Apply Now</button>
+                </div>
+
+                <!-- Announcement 6 -->
+                <div class="announcement slide-in-right" data-category="news">
+                    <div class="announcement-header">
+                        <span class="announcement-badge news">News</span>
+                        <span class="announcement-date">📅 January 15, 2026</span>
+                    </div>
+                    <h3 class="announcement-title">🏢 New AI & Machine Learning Lab Opening</h3>
+                    <p class="announcement-content">State-of-the-art AI and Machine Learning lab with 50 high-performance workstations and GPU clusters now open! The lab features NVIDIA RTX 4090 GPUs, latest software tools, and collaborative workspaces for research projects.</p>
+                    <div class="announcement-details">
+                        <p><strong>🖥️ Equipment:</strong> 50 workstations with RTX 4090</p>
+                        <p><strong>📍 Location:</strong> CCS Building, 4th Floor</p>
+                        <p><strong>⏰ Hours:</strong> 8:00 AM - 10:00 PM, Mon-Sat</p>
+                    </div>
+                    <button class="announcement-btn pulse">Book Session</button>
+                </div>
+
+                <!-- Announcement 7 -->
+                <div class="announcement slide-in-left" data-category="event">
+                    <div class="announcement-header">
+                        <span class="announcement-badge event">Event</span>
+                        <span class="announcement-date">📅 January 10, 2026</span>
+                    </div>
+                    <h3 class="announcement-title">🎯 Career Fair 2026</h3>
+                    <p class="announcement-content">Annual CCS Career Fair connecting students with 50+ tech companies for internships and full-time positions. Bring your resumes and prepare to impress recruiters from top companies like Amazon, Meta, and Apple!</p>
+                    <div class="announcement-details">
+                        <p><strong>🏢 Companies:</strong> 50+ tech companies attending</p>
+                        <p><strong>📅 Date:</strong> February 28, 2026</p>
+                        <p><strong>🕐 Time:</strong> 10:00 AM - 4:00 PM</p>
+                        <p><strong>📍 Venue:</strong> University Convention Center</p>
+                    </div>
+                    <button class="announcement-btn pulse">View Companies</button>
+                </div>
+
+                <!-- Announcement 8 -->
+                <div class="announcement slide-in-right" data-category="academic">
+                    <div class="announcement-header">
+                        <span class="announcement-badge academic">Academic</span>
+                        <span class="announcement-date">📅 January 5, 2026</span>
+                    </div>
+                    <h3 class="announcement-title">📖 New Certification Programs Available</h3>
+                    <p class="announcement-content">Expand your skillset with our new industry-recognized certification programs in Cloud Computing (AWS, Azure), Data Science, Cybersecurity, and Full-Stack Development. Programs designed in partnership with leading tech companies.</p>
+                    <div class="announcement-details">
+                        <p><strong>🎓 Programs:</strong> 8 certification tracks</p>
+                        <p><strong>⏱️ Duration:</strong> 6-12 weeks</p>
+                        <p><strong>💼 Benefits:</strong> Industry-recognized certificates</p>
+                    </div>
+                    <button class="announcement-btn pulse">Explore Programs</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="upcoming-events">
+            <div class="section-header">
+                <h2 class="reveal-text">Upcoming Events Calendar</h2>
+                <div class="line-animation"></div>
+            </div>
+            <div class="events-timeline">
+                <div class="timeline-event zoom-in" style="animation-delay: 0.1s">
+                    <div class="event-date">
+                        <span class="month">FEB</span>
+                        <span class="day">10</span>
+                    </div>
+                    <div class="event-content">
+                        <h4>Tech Innovation Summit</h4>
+                        <p>Full-day conference with industry leaders</p>
+                    </div>
+                </div>
+                <div class="timeline-event zoom-in" style="animation-delay: 0.2s">
+                    <div class="event-date">
+                        <span class="month">FEB</span>
+                        <span class="day">18</span>
+                    </div>
+                    <div class="event-content">
+                        <h4>Quantum Computing Lecture</h4>
+                        <p>Guest lecture by Dr. Alan Peterson (MIT)</p>
+                    </div>
+                </div>
+                <div class="timeline-event zoom-in" style="animation-delay: 0.3s">
+                    <div class="event-date">
+                        <span class="month">FEB</span>
+                        <span class="day">20</span>
+                    </div>
+                    <div class="event-content">
+                        <h4>Hackathon 2026</h4>
+                        <p>48-hour coding marathon for social impact</p>
+                    </div>
+                </div>
+                <div class="timeline-event zoom-in" style="animation-delay: 0.4s">
+                    <div class="event-date">
+                        <span class="month">FEB</span>
+                        <span class="day">28</span>
+                    </div>
+                    <div class="event-content">
+                        <h4>Career Fair</h4>
+                        <p>Meet 50+ tech companies for opportunities</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>College of Computer Studies</h3>
+                <p>Innovating the Future Through Technology</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>📞 +1 (555) 123-4567</p>
+                <p>📧 info@ccs.edu</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 College of Computer Studies. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

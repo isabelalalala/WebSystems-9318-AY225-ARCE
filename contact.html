@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - College of Computer Studies</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="mainNav">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">💻</span>
+                <span class="logo-text">CCS</span>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="announcements.html">Announcements</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-hero">
+        <div class="particles" id="particles"></div>
+        <h1 class="slide-in-top">Contact Us</h1>
+        <p class="slide-in-bottom">We'd Love to Hear From You</p>
+    </header>
+
+    <main class="container">
+        <section class="contact-intro fade-in">
+            <div class="section-header">
+                <h2 class="reveal-text">Get in Touch</h2>
+                <div class="line-animation"></div>
+            </div>
+            <p class="text-center">Have questions? We're here to help. Send us a message and we'll respond within 24-48 hours.</p>
+        </section>
+
+        <section class="contact-content-grid">
+            <div class="contact-form-container slide-in-left">
+                <div class="success-message" id="successMessage">
+                    <div class="success-icon">✅</div>
+                    <h3>Message Sent Successfully!</h3>
+                    <p>Thank you for contacting us. We'll get back to you within 24-48 hours.</p>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <h3>Send Us a Message</h3>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                            <span class="error-message" id="firstNameError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                            <span class="error-message" id="lastNameError"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+                        <span class="error-message" id="phoneError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inquiryType">Inquiry Type *</label>
+                        <select id="inquiryType" name="inquiryType" required>
+                            <option value="">Select inquiry type...</option>
+                            <option value="admission">Admission Information</option>
+                            <option value="program">Program Details</option>
+                            <option value="faculty">Faculty Consultation</option>
+                            <option value="research">Research Opportunities</option>
+                            <option value="scholarship">Scholarship Information</option>
+                            <option value="general">General Inquiry</option>
+                        </select>
+                        <span class="error-message" id="inquiryTypeError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <input type="text" id="subject" name="subject" required>
+                        <span class="error-message" id="subjectError"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                        <span class="char-count" id="charCount">0 / 500 characters</span>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+
+                    <button type="submit" class="submit-btn pulse">
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-loader" style="display: none;"></span>
+                    </button>
+                </form>
+            </div>
+
+            <div class="contact-info-container slide-in-right">
+                <div class="contact-info-card hover-lift">
+                    <h3>📍 Visit Us</h3>
+                    <p><strong>College of Computer Studies Building</strong></p>
+                    <p>University Campus</p>
+                    <p>Metro City, State 12345</p>
+                    <p>United States</p>
+                    <div class="map-placeholder">
+                        <canvas id="mapCanvas"></canvas>
+                    </div>
+                </div>
+
+                <div class="contact-info-card hover-lift">
+                    <h3>📞 Contact Information</h3>
+                    <div class="contact-detail">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <strong>Phone</strong>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <strong>Email</strong>
+                            <p>info@ccs.edu</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-icon">📠</div>
+                        <div>
+                            <strong>Fax</strong>
+                            <p>+1 (555) 123-4568</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-info-card hover-lift">
+                    <h3>🕐 Office Hours</h3>
+                    <div class="office-hours">
+                        <div class="hours-row">
+                            <span>Monday - Friday</span>
+                            <span>8:00 AM - 5:00 PM</span>
+                        </div>
+                        <div class="hours-row">
+                            <span>Saturday</span>
+                            <span>9:00 AM - 2:00 PM</span>
+                        </div>
+                        <div class="hours-row">
+                            <span>Sunday</span>
+                            <span>Closed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-info-card hover-lift">
+                    <h3>🌐 Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="#" class="social-link pulse">
+                            <span>📘</span> Facebook
+                        </a>
+                        <a href="#" class="social-link pulse">
+                            <span>🐦</span> Twitter
+                        </a>
+                        <a href="#" class="social-link pulse">
+                            <span>💼</span> LinkedIn
+                        </a>
+                        <a href="#" class="social-link pulse">
+                            <span>📸</span> Instagram
+                        </a>
+                        <a href="#" class="social-link pulse">
+                            <span>▶️</span> YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="departments-contact">
+            <div class="section-header">
+                <h2 class="reveal-text">Department Contacts</h2>
+                <div class="line-animation"></div>
+            </div>
+            <div class="departments-grid">
+                <div class="dept-card zoom-in">
+                    <div class="dept-icon">🎓</div>
+                    <h4>Admissions Office</h4>
+                    <p>📧 admissions@ccs.edu</p>
+                    <p>📞 +1 (555) 123-4570</p>
+                </div>
+                <div class="dept-card zoom-in" style="animation-delay: 0.1s">
+                    <div class="dept-icon">📚</div>
+                    <h4>Registrar</h4>
+                    <p>📧 registrar@ccs.edu</p>
+                    <p>📞 +1 (555) 123-4571</p>
+                </div>
+                <div class="dept-card zoom-in" style="animation-delay: 0.2s">
+                    <div class="dept-icon">💰</div>
+                    <h4>Financial Aid</h4>
+                    <p>📧 financialaid@ccs.edu</p>
+                    <p>📞 +1 (555) 123-4572</p>
+                </div>
+                <div class="dept-card zoom-in" style="animation-delay: 0.3s">
+                    <div class="dept-icon">🔬</div>
+                    <h4>Research Office</h4>
+                    <p>📧 research@ccs.edu</p>
+                    <p>📞 +1 (555) 123-4573</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>College of Computer Studies</h3>
+                <p>Innovating the Future Through Technology</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact</h4>
+                <p>📞 +1 (555) 123-4567</p>
+                <p>📧 info@ccs.edu</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 College of Computer Studies. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
